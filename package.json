@@ -2,9 +2,35 @@
   "name": "oreely",
   "version": "0.1.0",
   "description": "Ecto-like toolkit for data mapping and language integrated query for OCaml",
-  "main": "index.js",
+  "esy": {
+    "build": "dune build -p <PACKAGE_NAME>",
+    "buildDev": "pesy",
+    "release": {
+      "releasedBinaries": [
+        "OReely.exe"
+      ]
+    }
+  },
   "scripts": {
-    "test": "esy test"
+    "start": "esy x OReely",
+    "test": "esy test OReely"
+  },
+  "buildDirs": {
+    "bin": {
+      "require": [
+        "opium",
+        "redis",
+        "redis-lwt",
+        "lwt",
+        "lwt.unix"
+      ],
+      "preprocess": [
+        "pps",
+        "lwt_ppx"
+      ],
+      "main": "OReely",
+      "name": "OReely.exe"
+    }
   },
   "repository": {
     "type": "git",
