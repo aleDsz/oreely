@@ -1,2 +1,2 @@
-(lang dune 2.6)
-(name oreely)
+(lang dune 1.6)
+ (name oreely)
