@@ -1,0 +1,42 @@
+{
+  "name": "oreely",
+  "version": "0.1.0",
+  "description": "Ecto-like toolkit for data mapping and language integrated query for OCaml",
+  "main": "index.js",
+  "scripts": {
+    "test": "esy test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleDsz/oreely.git"
+  },
+  "keywords": [
+    "OCaml",
+    "ORM",
+    "Ecto",
+    "Reason"
+  ],
+  "author": "Alexandre de Souza <alexandre@aledsz.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aleDsz/oreely/issues"
+  },
+  "homepage": "https://github.com/aleDsz/oreely#readme",
+  "dependencies": {
+    "@esy-ocaml/reason": "*",
+    "@opam/dune": ">=1.6.0",
+    "@opam/lwt": "4.4.0",
+    "@opam/lwt_ppx": "1.2.4",
+    "@opam/opium": "0.17.1",
+    "@opam/redis": "0.3.6",
+    "@opam/redis-lwt": "0.3.6",
+    "ocaml": "4.8.1000"
+  },
+  "devDependencies": {
+    "ocaml": "4.8.1000",
+    "refmterr": "*",
+    "pesy": "*",
+    "@opam/merlin": "*",
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam"
+  }
+}
