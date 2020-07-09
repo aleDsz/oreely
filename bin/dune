@@ -1,0 +1,4 @@
+(executable
+ (public_name oreely)
+ (name main)
+ (libraries oreely))
