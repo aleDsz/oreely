@@ -12,24 +12,20 @@
     }
   },
   "scripts": {
-    "start": "esy x OReely",
-    "test": "esy test OReely"
+    "start": "esy x oreely",
+    "watch": "esy dune build -p oreely --watch",
+    "format": "esy dune build @fmt --auto-promote --root .",
+    "test": "esy test oreely"
   },
-  "buildDirs": {
-    "bin": {
-      "require": [
-        "opium",
-        "redis",
-        "redis-lwt",
-        "lwt",
-        "lwt.unix"
-      ],
-      "preprocess": [
-        "pps",
-        "lwt_ppx"
-      ],
-      "main": "OReely",
-      "name": "OReely.exe"
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "buildEnv": {
+      "ODOC_SYNTAX": "re"
+    },
+    "release": {
+      "bin": [
+        "Bin"
+      ]
     }
   },
   "repository": {
@@ -48,17 +44,11 @@
     "url": "https://github.com/aleDsz/oreely/issues"
   },
   "homepage": "https://github.com/aleDsz/oreely#readme",
-  "dependencies": {
+  "devDependencies": {
     "@esy-ocaml/reason": "*",
     "@opam/dune": ">=1.6.0",
     "@opam/lwt": "4.4.0",
     "@opam/lwt_ppx": "1.2.4",
-    "@opam/opium": "0.17.1",
-    "@opam/redis": "0.3.6",
-    "@opam/redis-lwt": "0.3.6",
-    "ocaml": "4.8.1000"
-  },
-  "devDependencies": {
     "ocaml": "4.8.1000",
     "refmterr": "*",
     "pesy": "*",
